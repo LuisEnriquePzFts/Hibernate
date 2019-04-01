@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/03/2019 02:15:07 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Alumno" table="alumno" catalog="ejercicio_hibernate" optimistic-lock="version">
+        <id name="cveAlu" type="string">
+            <column name="cveAlu" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomAlu" type="string">
+            <column name="nomAlu" length="20" not-null="true" />
+        </property>
+        <property name="edaAlu" type="string">
+            <column name="edaAlu" length="2" not-null="true" />
+        </property>
+        <property name="cveGru" type="string">
+            <column name="cveGru" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
